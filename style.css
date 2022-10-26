@@ -1,0 +1,100 @@
+:root {
+    font-size: 62.5%;
+    --fs-wacth: 'Roboto', sans-serif;
+    --base-color: 240;   
+    --hover-color: 150; 
+    --fc-watch: hsla(var(--base-color), 6%, 21%, 1);
+    --primary-color: hsl(var(--base-color), 6%, 21%);
+    --secondary-color: hsla(var(--hover-color), 97%, 28%, 1);
+    --third-color: hsla(var(--hover-color), 97%, 35%, 1);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hide {
+    display: none;
+}
+
+body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    height: 100vh;
+    width: clamp(65rem, 70vw, 82rem);    
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+.timer {
+    font-size: 12.6rem;
+    font-family: var(--fs-wacth);
+    font-weight: 500; 
+    color: var(--color-watch);
+    display: flex;
+}
+
+main svg path {
+    fill: var(--primary-color);
+}
+
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+}
+
+.controls button:hover svg path, 
+.pause svg path {
+fill: var(--secondary-color);
+}
+
+.sounds {
+    display: grid;
+    grid-template-areas: "A B";
+    gap: clamp(1.5rem, 2.2vw, 3.2rem);
+}
+
+.sounds svg path:nth-child(2) {
+    fill: var(--primary-color);
+}
+
+.sounds svg path:nth-child(1) {
+    fill: #E1E1E6;
+}
+
+button {
+    cursor: pointer;
+}
+
+.sounds button:hover:not(.select) svg path:nth-child(1) {
+    fill: var(--secondary-color);
+    transition: .5s .2s;
+} 
+
+.sounds button:hover svg path:nth-child(2),
+.sounds .select svg path:nth-child(2) {
+    fill: white;
+    transition: .5s .2s;
+}  
+
+.sounds .select svg path:nth-child(1) {
+    fill: var(--third-color);
+}
+
+@media (max-width:720px) {
+    body {
+        flex-direction: column;
+        justify-content: center;
+        gap: 48px;
+        width: auto;
+    }
+}
