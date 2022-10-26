@@ -4,6 +4,6 @@ Treinamento sobre modularização, fatoração e integração do código JS com 
 
 Feito por Nataniel Souza
 
-![preview](image/preview.mkv)
+![preview](image/preview.gif)
 
 Contato: nt.s@live.com
